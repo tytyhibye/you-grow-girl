@@ -22,13 +22,25 @@ There are no known bugs at the time of this update.
  
 ## Support and contact details
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/tyler/riddles-of-the-sphinx/issues) here on GitHub._
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/tytyhibye/you-grow-girl/issues) here on GitHub._
 
 ## Technologies Used
 
 * C#
 * .NET Core
 * Git and GitHub
+
+### Specs
+| Spec | Input | Output |
+| :------------- | :------------- | :------------- |
+| **User can name a plant** | User Input:”Name: Bob” | Output: “Time to take care of Bob" |
+| **User can select plant type** | User Input:”Type: Flower” | Output: “Flower growth image sets” |
+| **User can water plant** | User Input:”Action: Water” | Output: “Bob is no longer thirsty” |
+| **User can give plant sunshine** | User Input:”Action: Sunshine” | Output: “Bob loves the sun!” |
+| **User can fertilize plant** | User Input:”Action: Fertilize” | Output: “Bob will be stronger now” |
+| **User can sing to plant** | User Input:”Action: Sing" | Output: “You can't tell for sure, but Bob seems to like your singing.” |
+| **User can walk plants** | User Input:”Action: Walk” | Output: "Bob loves a little stroll around the neighborhood" |
+| **Plant grows according to quality of care** | User Input:”Action: Walk” | Output: "OH NO! You've dropped Bob." |
 
 ### License
 
