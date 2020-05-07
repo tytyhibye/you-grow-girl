@@ -72,23 +72,25 @@ namespace Plants.Game
     private void SingToPlant()
     {
       Random rand = new Random();
-      int count = rand.Next(1,3);
+      int count = rand.Next(1,5);
 
       if(count == 1)
       {
         WaterStatus = 2;
         SunshineStatus = 2;
         FertilizerStatus = 2;
-        SingStatus += 1;
+        SingStatus = 1;
       }
-      else
+      else if(count == 2)
       {
         WaterStatus -= 1;
         SunshineStatus -= 1;
         FertilizerStatus -= 1;
+        SingStatus = -1;
       }
       
       DisplaySingStatus();
+      SingStatus = 0;
       DetermineNextStep();
     }
 
@@ -143,7 +145,7 @@ namespace Plants.Game
         Console.WriteLine("*om nom nom*" + Name + " is perfectly full |^ w ^|");
       }
       else{
-        Console.WriteLine(Name + " is too full! <(   *_*   )> Give her something to break down the food!");
+        Console.WriteLine(Name + " is too full! <(   *_*   )> Give them something to break down the food!");
       }
     }
 
@@ -153,9 +155,13 @@ namespace Plants.Game
       {
         Console.WriteLine("Your beautiful voice has spoken to " + Name + "! Something magical is happening! |0 w 0|");
       }
-      else
+      else if (SingStatus < 0)
       {
         Console.WriteLine("Oof I don't think " + Name + " liked that. They look upsetti sphaghetti |# > n <|");
+      }
+      else
+      {
+        Console.WriteLine("We're not sure if " + Name + " heard you.... It's not very effective... |- . -|");
       }
     }
       
