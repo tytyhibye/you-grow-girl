@@ -139,7 +139,7 @@ namespace Plants.Game
                 _ `---'    ..   _   .   .    .
           _  ^      .  -    . _______ . ______ .    . 
         ");
-        // Environment.Exit(0);
+        Environment.Exit(0);
       }
       else if (WaterStatus == 2 && SunshineStatus == 2 && FertilizerStatus == 2 && Species == "flower")
       {
@@ -154,7 +154,7 @@ namespace Plants.Game
       jgs \\|//   \\|///  \\\|//\\\|/// \|///  \\\|//  \\|//  \\\|// 
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         ");
-        // Environment.Exit(0);
+        Environment.Exit(0);
       }
     }
   }
