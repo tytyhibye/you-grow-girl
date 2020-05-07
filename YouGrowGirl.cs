@@ -12,7 +12,7 @@ namespace Plants.Game
     public int SingStatus { get; set; }
     public int WalkStatus { get; set; }
     public int TotalCareStatus { get; set; }
-
+    private Dictionary<int, Action> GameActions { get; set; }
 
     public Plant(string name, string species)
     {
@@ -24,10 +24,10 @@ namespace Plants.Game
       SingStatus = 0;
       WalkStatus = 0;
       TotalCareStatus = 0;
+      GameActions = new Dictionary<int, Action>() { {1, () => WaterPlant()}, {2, () => SunPlant() }, {3, () => FertilizePlant()}, {4, () => SingToPlant()}, {5, () => WalkPlant()} };
     }
 
     
-    // private static Dictionary<int, func<string, int>> _gameActions = new Dictionary<int, func<string, int>>() { {1, WaterPlant()}, {2, SunPlant() }, };
 
     public static Random rand = new Random();
     int count = rand.Next(1,3);
@@ -36,19 +36,29 @@ namespace Plants.Game
     {
       Console.WriteLine(name + " the " + species + " is good to grow!");
       Console.WriteLine("Choose a plant based activity:");
+      Console.WriteLine("1: Water, 2: Sun, 3: Fertilize, 4: Sing (Risky!), 5: Walk (Risky!)");
+      Console.WriteLine("Enter a number 1-5.");
+      string action = Console.ReadLine();
       
 
     }
 
     public void DetermineNextStep()
     {
-      WaterPlant();
-      SunPlant();
-      FertilizePlant();
-      SingToPlant();
-      WalkPlant();
-      IsGameOver();
+      // if (action == "1")
+      // {
+      //   _riddleDictionary
+      // }
     }
+    // public void DetermineNextStep()
+    // {
+    //   WaterPlant();
+    //   SunPlant();
+    //   FertilizePlant();
+    //   SingToPlant();
+    //   WalkPlant();
+    //   IsGameOver();
+    // }
 
     private void WaterPlant()
     {
