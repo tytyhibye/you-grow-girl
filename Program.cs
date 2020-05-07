@@ -7,9 +7,10 @@ namespace Plants
   {
     public static string DecideSpecies()
     {
-      Console.WriteLine("Would you like to grow a flower or a cactus? F/C");
+      Console.WriteLine("Would you like to grow a flower or a cactus?");
+      Console.WriteLine("Please enter F or C for your selection:");
       string speciesInput = (Console.ReadLine().ToLower());
-      if (speciesInput == "f")
+      if (speciesInput == "f" || speciesInput == "flower")
       {
         return "flower";
       }

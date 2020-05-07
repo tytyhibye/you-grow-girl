@@ -97,8 +97,16 @@ namespace Plants.Game
     private void WalkPlant()
     {
       WalkStatus += 1;
-      // DisplayWalkStatus();
+      DisplayWalkStatus();
       DetermineNextStep();
+    }
+
+    public void DisplayWalkStatus()
+    {
+      Console.WriteLine("your " + Species + " fit perfectly in that baby bjorn. Stroll around town has reset all stats to zero.");
+      Console.WriteLine("");
+      Console.WriteLine("Press ENTER to continue!");
+      Console.ReadLine();
     }
 
     public void DisplayWaterStatus()
@@ -115,6 +123,9 @@ namespace Plants.Game
       {
         Console.WriteLine(Name + " is drowning! |X_X| help dry them out.");  
       }
+      Console.WriteLine("");
+      Console.WriteLine("Press ENTER to continue!");
+      Console.ReadLine();
     }
 
     
@@ -132,6 +143,9 @@ namespace Plants.Game
       {
         Console.WriteLine("Eternal darkeness. " + Name + "'s life is a static void |X_x|");
       }
+      Console.WriteLine("");
+      Console.WriteLine("Press ENTER to continue!");
+      Console.ReadLine();
     }
 
     public void DisplayFertilizerStatus()
@@ -147,6 +161,9 @@ namespace Plants.Game
       else{
         Console.WriteLine(Name + " is too full! <(   *_*   )> Give them something to break down the food!");
       }
+      Console.WriteLine("");
+      Console.WriteLine("Press ENTER to continue!");
+      Console.ReadLine();
     }
 
     public void DisplaySingStatus()
@@ -163,6 +180,9 @@ namespace Plants.Game
       {
         Console.WriteLine("We're not sure if " + Name + " heard you.... It's not very effective... |- . -|");
       }
+      Console.WriteLine("");
+      Console.WriteLine("Press ENTER to continue!");
+      Console.ReadLine();
     }
       
     private void IsGameOver()
