@@ -29,12 +29,52 @@ namespace Plants
           \ // _ \| | | | | | __| '__/ _ \ \ /\ / / | | __| | '__| |
           | | (_) | |_| | | |_\ \ | | (_) \ V  V /  | |_\ \ | |  | |
           \_/\___/ \__,_|  \____/_|  \___/ \_/\_/    \____/_|_|  |_| ");
-      // DISPLAY PLANT IMAGE, WELCOME PAGE FONT TOO for ^^^^?
       Console.WriteLine("What would you like to name your plant?");
       string name = Console.ReadLine();
       Console.WriteLine("Welcome to the world " + name + "!");
 
       string species = DecideSpecies();
+
+      if (species == "cactus")
+       {
+         Console.WriteLine(@"
+             _x_x__x_____x
+            x  / x | x x  \ 
+           x  x x| x |x x  x 
+           |  | |x | || |  |
+           |  x || x x| |  x 
+          __\__x_x_|_x_x__/__ 
+          \                 / 
+           `---------------' 
+            |   =^ w ^=   |
+            \_____________/ F_P
+                  ");
+       }
+      else if (species == "flower")
+      {
+        Console.WriteLine(@"
+                     ,
+                 /\^/`\
+                | \/   |
+                | |    |
+                \ \   /
+                '\\//'
+                  ||
+                  ||
+                  ||
+                  ||  ,
+              |\  ||  |\
+              | | ||  | |
+              | | || / /
+               \ \||/ /
+                `\\/ /`
+           _______\_/_________ 
+          \                 / 
+           `---------------' 
+            |   =^ w ^=   |
+            \_____________/ jgs & F_P
+        ");
+      }
 
       Plant userPlant = new Plant(name, species);
       userPlant.InitiateGame(name, species);

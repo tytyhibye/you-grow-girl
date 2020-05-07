@@ -42,6 +42,10 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **User can walk plants** | User Input:”Action: Walk” | Output: "Bob loves a little stroll around the neighborhood" |
 | **Plant grows according to quality of care** | User Input:”Action: Walk” | Output: "OH NO! You've dropped Bob." |
 
+### Resources
+* [ASCII art plant bases](https://www.asciiart.eu/plants)
+* [Text to font art](http://patorjk.com/software/taag/)
+
 ### License
 
 This software is licensed under the MIT license.
