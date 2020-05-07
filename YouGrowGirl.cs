@@ -38,6 +38,7 @@ namespace Plants.Game
     public void DetermineNextStep()
     {
       IsGameOver();
+      IsBadEnd();
       Console.WriteLine("Choose a plant based activity:");
       Console.WriteLine("1: Water, 2: Sun, 3: Fertilize, 4: Sing (Risky!), 5: Walk (Reset your bearings!)");
       Console.WriteLine("Enter a number 1-5.");
@@ -224,6 +225,39 @@ namespace Plants.Game
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         ");
         Environment.Exit(0);
+      }
+    }
+    
+    private void IsBadEnd()
+    {
+      if(WaterStatus < 0 && SunshineStatus < 0 && FertilizerStatus < 0)
+      {
+      Console.WriteLine("Bad end... Sheriff Jennifer is coming for you.");
+      Console.WriteLine(@"
+                   / '-' \
+                  ;       ;
+              /'-|       |-'\
+              |   |_______K   |
+              \   '-------'   /
+              '.___.....___.'
+                  | ;  : ;|
+                 _|;__;__.|_
+                |     Y     |    .--.
+       .--.      \__.'^'.__/    /;   \
+      /   ;\      |_  ;  _|     |  ' |
+      | ;  |      { `'__''`}    |;   |
+      |'   |      {  /  \  }    | ;  |
+      |  ; |      {       }     |    |
+      |;   |      ;`-.__.'|     |:  ;|
+      | ;  \      |;  ;   |_____/ ;  |
+      |   '.'-----'      ' -_   .'   /
+      \  '.   - _  ' ;  ;  _  -    .'
+      '.   -     - ;  ;   .------`
+        `--------.       ;|
+              jgs |;  ,   |
+                  |     ; |
+                  ");
+      Environment.Exit(0);
       }
     }
   }

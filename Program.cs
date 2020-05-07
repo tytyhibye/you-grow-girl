@@ -15,14 +15,12 @@ namespace Plants
         return "flower";
       }
       else
-      // } else if (speciesInput == "c")
       {
         return "cactus";
       }
     }
     public static void Main()
     {
-      
       Console.WriteLine(@"
         __   __            _____                     _____ _      _ 
         \ \ / /           |  __ \                   |  __ (_)    | |
