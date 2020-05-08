@@ -32,6 +32,7 @@ namespace Plants.Game
     public void InitiateGame(string name, string species)
     {
       Console.WriteLine(name + " the " + species + " is good to grow!");
+      Console.WriteLine("");
       DetermineNextStep();
     }
 

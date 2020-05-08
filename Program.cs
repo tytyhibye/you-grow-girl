@@ -8,9 +8,9 @@ namespace Plants
     public static string DecideSpecies()
     {
       Console.WriteLine("Would you like to grow a flower or a cactus?");
-      Console.WriteLine("Please enter F or C for your selection:");
+      
       string speciesInput = (Console.ReadLine().ToLower());
-      if (speciesInput == "f" || speciesInput == "flower")
+      if (speciesInput == "flower")
       {
         return "flower";
       }
@@ -28,9 +28,10 @@ namespace Plants
           \ // _ \| | | | | | __| '__/ _ \ \ /\ / / | | __| | '__| |
           | | (_) | |_| | | |_\ \ | | (_) \ V  V /  | |_\ \ | |  | |
           \_/\___/ \__,_|  \____/_|  \___/ \_/\_/    \____/_|_|  |_| ");
-      Console.WriteLine("What would you like to name your plant?");
+      Console.WriteLine("                  What would you like to name your plant?");
       string name = Console.ReadLine();
       Console.WriteLine("Welcome to the world " + name + "!");
+      Console.WriteLine("");
 
       string species = DecideSpecies();
 
